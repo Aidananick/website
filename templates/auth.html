@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Instore -  товары для дома в Алматы </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cd2a258a29.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'instore/css/index.css'%}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{%url 'index' %}">Instore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{%url 'uslugi' %}">Услуги</a>
+        </li>
+
+      </ul>
+
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-regular fa-user"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{%url 'mypage' %}">Регистрация</a></li>
+            <li><a class="dropdown-item" href="#">Авторизация</a></li>
+          </ul>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" type="button"  data-bs-toggle="modal" data-bs-target="#Modal-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <div class="modal fade" id="Modal-cart" tabindex="-1" aria-labelledby="Modal-cartLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header bg-success-subtle text-white">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Корзина</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Товары</th>
+                        <th scope="col">Названия</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col">Цены</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><img src="static/instore/images/products/плед.png" alt=""></a></td>
+                        <td><a href="#">Плед микрофибра Comodo 220х240 см цвет серый</a></td>
+                        <td>1</td>
+                        <td>13 340 ₸ </td>
+                      </tr>
+                     <tr>
+                        <th scope="row">2</th>
+                       <td><img src="static/instore/images/products/кресло.png" alt=""></a></td>
+                        <td><a href="#">Кресло c высокой спинкой ВЕДБУ, Гуннаред синий</a></td>
+                        <td>1</td>
+                        <td>229 990 ₸ </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><img  src="static/instore/images/products/стол.png" alt=""></a></td>
+                        <td><a href="#">Письменный стол ХЕМНЭС, белая морилка 155x65 см</a></td>
+                        <td>1</td>
+                        <td>119 990 ₸ </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <form>
+  <div class="form-group">
+      <h1>Вход в страницу</h1>
+    <label for="exampleInputEmail1">Адрес email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Пароль</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">сохранить меня</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+    </div>
+  </div>
+
+<section>
+  <div class="container my-card-container">
+    <h1>Instore в Алматы</h1>
+    <p>В ассортименте интернет-магазина Instore представлены товары для строительства, ремонта и обустройства дома с удобной доставкой и по низким ценам. В нашем каталоге Вы сможете подобрать и купить все необходимое для:</p>
+    <ul>
+      <li>строительства – стройматериалы, инструменты;</li>
+      <li>ремонта – электротовары, элементы системы водоснабжения, краска, столярные и скобяные изделия;</li>
+      <li>комфорта – сантехническая продукция;</li>
+      <li>создания домашнего уюта – декор, товары для хранения, напольные покрытия, плитка;</li>
+      <li>обустройства кухни;</li>
+      <li>освещения внутри помещений и придомового участка;</li>
+      <li>ухода за садом и придомовой территорией.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4>Информация</h4>
+          <ul class="list-unstyled">
+            <li><a href="">Главная</a> </li>
+            <li><a href="{%url 'about' %}">О магазине</a> </li>
+            <li><a href="">Оплата и доставка</a> </li>
+            <li><a href="">Контакты</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <ul class="list-unstyled">
+             <h4>Время работы</h4>
+            <li>г. Алматы, ул. Сатпаева, 17</li>
+            <li>пн-вс: 90:00-20:00</li>
+            <li>без перерыва</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <ul class="list-unstyled">
+            <h4>Контакты</h4>
+            <li><a href="">+7 747 856 56 74</a> </li>
+            <li><a href="">+7 707 569 58 25</a> </li>
+            <li><a href="">+7 700 455 85 12</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4>Мы в сети</h4>
+          <div class="footer-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Instore -  товары для дома в Алматы </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cd2a258a29.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'instore/css/index.css'%}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{%url 'index' %}">Instore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{%url 'uslugi' %}">Услуги</a>
+        </li>
+
+      </ul>
+
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-regular fa-user"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{%url 'mypage' %}">Регистрация</a></li>
+            <li><a class="dropdown-item" href="#">Авторизация</a></li>
+          </ul>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" type="button"  data-bs-toggle="modal" data-bs-target="#Modal-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <div class="modal fade" id="Modal-cart" tabindex="-1" aria-labelledby="Modal-cartLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header bg-success-subtle text-white">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Корзина</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Товары</th>
+                        <th scope="col">Названия</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col">Цены</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><img src="static/instore/images/products/плед.png" alt=""></a></td>
+                        <td><a href="#">Плед микрофибра Comodo 220х240 см цвет серый</a></td>
+                        <td>1</td>
+                        <td>13 340 ₸ </td>
+                      </tr>
+                     <tr>
+                        <th scope="row">2</th>
+                       <td><img src="static/instore/images/products/кресло.png" alt=""></a></td>
+                        <td><a href="#">Кресло c высокой спинкой ВЕДБУ, Гуннаред синий</a></td>
+                        <td>1</td>
+                        <td>229 990 ₸ </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td><img  src="static/instore/images/products/стол.png" alt=""></a></td>
+                        <td><a href="#">Письменный стол ХЕМНЭС, белая морилка 155x65 см</a></td>
+                        <td>1</td>
+                        <td>119 990 ₸ </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="catalog-top_block">
+        <h1> О магазине</h1>
+    <link href="/bitrix/css/main/font-awesome.css?164445585428777" type="text/css" rel="stylesheet" />
+<div class="bx-breadcrumb" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a class="bx-breadcrumb-item-link" href="/" title="Главная страница" itemprop="item">
+					<span class="bx-breadcrumb-item-text" itemprop="name">Главная страница</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</div><i class="bx-breadcrumb-item-angle fa fa-angle-right"></i>
+			<div class="bx-breadcrumb-item">
+				<span class="bx-breadcrumb-item-text">О магазине</span>
+			</div></div></section>
+
+
+
+
+
+
+	<p>Мы рады приветствовать вас на сайте нашей компании.</p>
+
+	<p>Наша компания была основана в 1993 году, а наш интернет-магазин стал одним из первых магазинов, осуществляющих on-line продажу одежды в регионе. Компания специализируется на оптовой и розничной продаже одежды как для дома, так и для офиса.</p>
+
+	<p>На данный момент мы представляем собой крупную компанию, владеющую интернет&ndash;магазином и имеющую в своей сети единый call-центр, который регулирует всю деятельность магазина, отдел продаж, службу доставки, широкий штат квалифицированных сборщиков, собственный склад c постоянным наличием необходимого запаса товаров.</p>
+
+	<p>За это время у нас сложились партнерские отношения с ведущими производителями, позволяющие предлагать высококачественную продукцию по конкурентоспособным ценам.</p>
+
+	<p>Мы можем гордиться тем, что у нас один из самых широких ассортиментов одежды в городе и области. </p>
+
+	<h2>Наши возможности</h2>
+	<div class="row">
+		<div class="col-sm-4">
+			<ul>
+				<li><span style="font-size:13px;">Быстрая доставка</span></li>
+				<li><span style="font-size:13px;">Низкие цены</span></li>
+				<li><span style="font-size:13px;">Широкий ассортимент</span></li>
+				<li><span style="font-size:13px;">Бонусы и подарки</span></li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul>
+				<li><span style="font-size:13px;">Отличное обслуживаение</span></li>
+				<li><span style="font-size:13px;">Профессиональный менеджеры</span></li>
+				<li><span style="font-size:13px;">Гарантия на все товары</span></li>
+				<li><span style="font-size:13px;">Надежные поставщики</span></li>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<ul>
+				<li><span style="font-size:13px;">Сезонные скидки</span></li>
+				<li><span style="font-size:13px;">Программа лояльности</span></li>
+				<li><span style="font-size:13px;">Карты постоянных клиентов</span></li>
+			</ul>
+		</div>
+	</div>
+	<br/>
+	<p>Мы всегда рады общению с нашими клиентами. Если у вас есть какие-либо пожелания, предложения, замечания, касающиеся работы нашего Интернет-магазина - пишите нам, и мы с благодарностью примем ваше мнение во внимание:</p>
+	<p><b>Электронная почта</b>: <a href="mailto:sale@usadba-resto.tmweb.ru">sale@usadba-resto.tmweb.ru</a></p>
+
+
+
+<footer>
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4>Информация</h4>
+          <ul class="list-unstyled">
+            <li><a href="">Главная</a> </li>
+            <li><a href="">О магазине</a> </li>
+            <li><a href="">Оплата и доставка</a> </li>
+            <li><a href="">Контакты</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <ul class="list-unstyled">
+             <h4>Время работы</h4>
+            <li>г. Алматы, ул. Сатпаева, 17</li>
+            <li>пн-вс: 90:00-20:00</li>
+            <li>без перерыва</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <ul class="list-unstyled">
+            <h4>Контакты</h4>
+            <li><a href="">+7 747 856 56 74</a> </li>
+            <li><a href="">+7 707 569 58 25</a> </li>
+            <li><a href="">+7 700 455 85 12</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4>Мы в сети</h4>
+          <div class="footer-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+</body>
+</html>
